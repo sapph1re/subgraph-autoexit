@@ -1,0 +1,8 @@
+{
+  "matic": {
+    "AutoExit": {
+      "address": "0xCe98E8973102bD64e866bc67E40bA39f1fd1239e",
+      "startBlock": 61234968
+    }
+  }
+}

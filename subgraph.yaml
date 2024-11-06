@@ -1,0 +1,47 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: AutoExit
+    network: matic
+    source:
+      address: "0xCe98E8973102bD64e866bc67E40bA39f1fd1239e"
+      abi: AutoExit
+      startBlock: 61234968
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Executed
+        - OperatorChanged
+        - OwnershipTransferStarted
+        - OwnershipTransferred
+        - PositionConfigured
+        - Swap
+        - TWAPConfigChanged
+        - WithdrawerChanged
+      abis:
+        - name: AutoExit
+          file: ./abis/AutoExit.json
+      eventHandlers:
+        - event: Executed(indexed uint256,address,bool,uint256,uint256,address,address)
+          handler: handleExecuted
+        - event: OperatorChanged(address,bool)
+          handler: handleOperatorChanged
+        - event: OwnershipTransferStarted(indexed address,indexed address)
+          handler: handleOwnershipTransferStarted
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: PositionConfigured(indexed uint256,bool,bool,bool,int24,int24,uint64,uint64,bool,uint64)
+          handler: handlePositionConfigured
+        - event: Swap(indexed address,indexed address,uint256,uint256)
+          handler: handleSwap
+        - event: TWAPConfigChanged(uint32,uint16)
+          handler: handleTWAPConfigChanged
+        - event: WithdrawerChanged(address)
+          handler: handleWithdrawerChanged
+      file: ./src/auto-exit.ts

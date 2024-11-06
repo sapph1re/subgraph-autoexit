@@ -1,0 +1,85 @@
+type Executed @entity(immutable: true) {
+  id: Bytes!
+  tokenId: BigInt! # uint256
+  account: Bytes! # address
+  isSwap: Boolean! # bool
+  amountReturned0: BigInt! # uint256
+  amountReturned1: BigInt! # uint256
+  token0: Bytes! # address
+  token1: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OperatorChanged @entity(immutable: true) {
+  id: Bytes!
+  newOperator: Bytes! # address
+  active: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferStarted @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PositionConfigured @entity(immutable: true) {
+  id: Bytes!
+  tokenId: BigInt! # uint256
+  isActive: Boolean! # bool
+  token0Swap: Boolean! # bool
+  token1Swap: Boolean! # bool
+  token0TriggerTick: Int! # int24
+  token1TriggerTick: Int! # int24
+  token0SlippageX64: BigInt! # uint64
+  token1SlippageX64: BigInt! # uint64
+  onlyFees: Boolean! # bool
+  maxRewardX64: BigInt! # uint64
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Swap @entity(immutable: true) {
+  id: Bytes!
+  tokenIn: Bytes! # address
+  tokenOut: Bytes! # address
+  amountIn: BigInt! # uint256
+  amountOut: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type TWAPConfigChanged @entity(immutable: true) {
+  id: Bytes!
+  TWAPSeconds: BigInt! # uint32
+  maxTWAPTickDifference: Int! # uint16
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type WithdrawerChanged @entity(immutable: true) {
+  id: Bytes!
+  newWithdrawer: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
