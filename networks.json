@@ -5,7 +5,7 @@
       "startBlock": 61234968
     }
   },
-  "arbitrum": {
+  "arbitrum-one": {
     "AutoExit": {
       "address": "0x6c6707F5E24B916BB3e45C5822466a88b315F5Ec",
       "startBlock": 249939319
