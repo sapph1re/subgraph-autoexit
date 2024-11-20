@@ -4,5 +4,17 @@
       "address": "0xCe98E8973102bD64e866bc67E40bA39f1fd1239e",
       "startBlock": 61234968
     }
+  },
+  "arbitrum": {
+    "AutoExit": {
+      "address": "0x6c6707F5E24B916BB3e45C5822466a88b315F5Ec",
+      "startBlock": 249939319
+    }
+  },
+  "optimism": {
+    "AutoExit": {
+      "address": "0x29C08ec5584286E6Fa42e85c86F49b83a1A0eA0b",
+      "startBlock": 124920129
+    }
   }
 }

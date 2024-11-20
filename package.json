@@ -1,13 +1,13 @@
 {
-  "name": "autoexit-polygon",
+  "name": "autoexit",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ autoexit-polygon",
-    "create-local": "graph create --node http://localhost:8020/ autoexit-polygon",
-    "remove-local": "graph remove --node http://localhost:8020/ autoexit-polygon",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 autoexit-polygon",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ autoexit",
+    "create-local": "graph create --node http://localhost:8020/ autoexit",
+    "remove-local": "graph remove --node http://localhost:8020/ autoexit",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 autoexit",
     "test": "graph test"
   },
   "dependencies": {
