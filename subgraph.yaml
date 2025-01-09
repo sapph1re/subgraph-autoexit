@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: AutoExit
-    network: matic
+    network: base
     source:
-      address: "0xCe98E8973102bD64e866bc67E40bA39f1fd1239e"
       abi: AutoExit
-      startBlock: 61234968
+      address: "0x29C08ec5584286E6Fa42e85c86F49b83a1A0eA0b"
+      startBlock: 24679902
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -36,7 +36,8 @@ dataSources:
           handler: handleOwnershipTransferStarted
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
-        - event: PositionConfigured(indexed uint256,bool,bool,bool,int24,int24,uint64,uint64,bool,uint64)
+        - event: PositionConfigured(indexed
+            uint256,bool,bool,bool,int24,int24,uint64,uint64,bool,uint64)
           handler: handlePositionConfigured
         - event: Swap(indexed address,indexed address,uint256,uint256)
           handler: handleSwap

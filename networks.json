@@ -13,8 +13,14 @@
   },
   "optimism": {
     "AutoExit": {
-      "address": "0x29C08ec5584286E6Fa42e85c86F49b83a1A0eA0b",
-      "startBlock": 124920129
+      "address": "0x2df8687cc775236d3822d422b7b5170782e67057",
+      "startBlock": 130403738
+    }
+  },
+  "base": {
+    "AutoExit": {
+      "address": "0x79fAa4D9cd908e93126A539322861b9421CC326a",
+      "startBlock": 24808416
     }
   }
 }
