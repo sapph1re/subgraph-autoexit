@@ -9,8 +9,8 @@ dataSources:
     network: base
     source:
       abi: AutoExit
-      address: "0x29C08ec5584286E6Fa42e85c86F49b83a1A0eA0b"
-      startBlock: 24679902
+      address: "0xb6cca601489A68416e01D2a90EC3f316B726fe82"
+      startBlock: 30443120
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -28,7 +28,8 @@ dataSources:
         - name: AutoExit
           file: ./abis/AutoExit.json
       eventHandlers:
-        - event: Executed(indexed uint256,address,bool,uint256,uint256,address,address)
+        - event: Executed(indexed
+            uint256,address,bool,uint256,uint256,address,address,address)
           handler: handleExecuted
         - event: OperatorChanged(address,bool)
           handler: handleOperatorChanged
@@ -37,7 +38,7 @@ dataSources:
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
         - event: PositionConfigured(indexed
-            uint256,bool,bool,bool,int24,int24,uint64,uint64,bool,uint64)
+            uint256,bool,bool,bool,address,int24,int24,uint64,uint64,bool,uint64)
           handler: handlePositionConfigured
         - event: Swap(indexed address,indexed address,uint256,uint256)
           handler: handleSwap

@@ -7,8 +7,8 @@
   },
   "arbitrum-one": {
     "AutoExit": {
-      "address": "0x6c6707F5E24B916BB3e45C5822466a88b315F5Ec",
-      "startBlock": 249939319
+      "address": "0xfA75e13B9092508Ea30B11F5F17C9De2686725D4",
+      "startBlock": 324156280
     }
   },
   "optimism": {
@@ -19,8 +19,8 @@
   },
   "base": {
     "AutoExit": {
-      "address": "0x79fAa4D9cd908e93126A539322861b9421CC326a",
-      "startBlock": 24808416
+      "address": "0xb6cca601489A68416e01D2a90EC3f316B726fe82",
+      "startBlock": 30443120
     }
   }
 }
